@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <p>배열은 대괄호 객체는 중괄호</p>
+      <script>
+        var lee = {
+          "age":"7",
+          "job":"student"
+        }
+        document.write("age : "+lee.age+"<br>");
+        document.write("job  :"+lee.job+"<br>");
+        lee.address = "iaan";
+        document.write("address : "+lee.address+"<br>");
+        lee["data scientist"] = "minhyeong";
+        document.write("data scientist : "+lee["data scientist"]+"<br>");
+      </script>
+      <h2>Iterate</h2>
+      <script>
+        for(var key in lee) {
+          //document.write(lee[key]+'<br>');
+          //document.write(key+'<br>');
+          document.write(key+' : '+lee[key]+'<br>');
+        }
+      </script>
+       <h2>Property & Method</h2>
+       <script>
+         lee.showAll = function(){     // == funtion showALl()
+           for(var key in this) {
+             document.write(key+' : '+this[key]+'<br>');
+           }
+         }
+         lee.showAll();
+       </script>
+  </body>
+</html>
